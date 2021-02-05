@@ -4,6 +4,7 @@ import { Cards } from '../ChakraComponents/Cards'
 import { MenuPage } from '../ChakraComponents/MenuPage'
 import { mentors } from '../mentors'
 import { Error404 } from '../Error404'
+import {Footer} from '../ChakraComponents/Footer'
 
 export const BookingDetailsMentor = () =>{
    let { idMentors } = useParams();
@@ -33,6 +34,7 @@ export const BookingDetailsMentor = () =>{
            <React.Fragment>
                <MenuPage />
                <Cards key={meet.id} name={meet.name} state={meet.status} />
+               <Footer linkPage1="/bookings" linkPage2="/create-booking" />
            </React.Fragment>
        );
    }

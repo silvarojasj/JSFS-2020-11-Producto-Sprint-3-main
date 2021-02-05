@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Badge, Text, Spacer, Flex, useProps } from "@chakra-ui/react";
+import { Box, Badge, Text, Spacer, Flex} from "@chakra-ui/react";
 import { Buttons } from './Buttons';
 
 
