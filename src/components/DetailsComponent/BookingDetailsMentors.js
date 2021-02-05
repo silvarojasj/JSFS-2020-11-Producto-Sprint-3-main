@@ -18,8 +18,8 @@ export const BookingDetailsMentor = () =>{
        for (i in mentors) {
            if (mentors[i].name == { idMentors }.idMentors) {
                meet.name = mentors[i].name;
+               meet.id = mentors[i].id;
                meet.status = mentors[i].status;
-               meet.id=mentors[i].id;
                isname += 1;
            }
        }
@@ -32,7 +32,7 @@ export const BookingDetailsMentor = () =>{
        return (
            <React.Fragment>
                <MenuPage />
-               <Cards name={meet.name} id={meet.id} state={meet.status} />
+               <Cards key={meet.id} name={meet.name} state={meet.status} />
            </React.Fragment>
        );
    }

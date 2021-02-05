@@ -12,12 +12,14 @@ export const BookingListPage = () => {
     const navigateToCreateBookings = () => {
         history.push("/create-booking");
     }
+
+    const list =listBookings.map(({ name, date, time, status,id }) => {
+        return <Cards key={id} name={name} date={date} time={time} state={status}/>
+    })
     return (
         <React.Fragment>
             <MenuPage />
-            {listBookings.map(({ name, date, time, status,id }) => {
-                return <Cards name={name} id={id} date={date} time={time} state={status}/>
-            })}
+                {list}
             <Buttons name="Create Booking" onClick={navigateToCreateBookings} />
         </React.Fragment>
     );

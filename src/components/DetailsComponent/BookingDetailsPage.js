@@ -21,9 +21,9 @@ export  const BookingDetailsPage = () => {
             if(listBookings[i].name=={idBookings}.idBookings)
             {
                 meet.name=listBookings[i].name;
+                meet.id=listBookings[i].id;
                 meet.date=listBookings[i].date;
                 meet.time=listBookings[i].time;
-                meet.id=listBookings[i].id;
                 meet.status=listBookings[i].status;
                 isname+=1;
             }
@@ -38,7 +38,7 @@ export  const BookingDetailsPage = () => {
         return(
         <React.Fragment>
             <MenuPage />
-            <Cards name={meet.name} id={meet.id} date={meet.date} time={meet.time} state={meet.status}/>
+            <Cards key={meet.id} name={meet.name}  date={meet.date} time={meet.time} state={meet.status}/>
         </React.Fragment> 
         );   
     }

@@ -4,12 +4,13 @@ import { MenuPage } from './MenuPage'
 import { myBookings } from '../myBookings'
 
 export const MyBookings = () => {
+    const list = myBookings.map(({ name, id, date, time, status }) => {
+        return <Cards key={id} name={name} date={date} time={time} state={status} />
+    })
     return (
         <React.Fragment>
             <MenuPage />
-            {myBookings.map(({ name, id,date, time, status }) => {
-                return <Cards name={name} id={id} date={date} time={time} state={status} />
-            })}
+            {list}
         </React.Fragment>
     );
 } 

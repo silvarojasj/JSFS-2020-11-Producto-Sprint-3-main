@@ -7,8 +7,8 @@ export const SelectPage = () => {
         <React.Fragment>
             <Stack spacing={3} align="center">
                 <Select placeholder="Select option" margin="1em" w="60">
-                    {mentors.map(({ name }) => {
-                        return <option value={name}>{name}</option>;
+                    {mentors.map(({ name,id }) => {
+                        return <option  key={id} value={name}>{name}</option>;
                     })}
                 </Select>
             </Stack>

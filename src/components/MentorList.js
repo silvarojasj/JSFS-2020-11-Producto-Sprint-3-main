@@ -4,12 +4,13 @@ import { MenuPage } from './ChakraComponents/MenuPage'
 import { mentors } from './mentors'
 
 export const MentorList = () => {
+    const list = mentors.map(({ name, id, status }) => {
+        return <Cards key={id} name={name} state={status} />
+    })
     return (
         <React.Fragment>
             <MenuPage />
-            {mentors.map(({ name, status,id }) => {
-                return <Cards name={name} id={id} state={status} />
-            })}
+            {list}
         </React.Fragment>
     );
 }

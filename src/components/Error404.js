@@ -8,6 +8,9 @@ export const Error404 = () => {
             <Stack align="center">
                 <ImagePage value="Error 404" />
                 <Text fontSize="4xl" color="blue">
+                    Page not found
+                </Text>
+                <Text fontSize="4xl" color="blue">
                     <Link to="/">Ir a la página principal</Link>
                 </Text>
             </Stack>

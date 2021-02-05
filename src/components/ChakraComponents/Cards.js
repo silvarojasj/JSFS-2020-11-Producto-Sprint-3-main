@@ -17,7 +17,6 @@ export const Cards = (props) => {
             borderColor="black"
             overflow="hidden"
             margin="0.5rem"
-            key={props.id}
         >
             <Flex spacing={4}>
                 <Text fontSize="4xl" fontWeight="bold">
